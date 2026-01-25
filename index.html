@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>サービスLP（2件目）</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+<body>
+  <header>
+    <button class="menu-btn" type="button" aria-label="メニューを開く">menu</button>
+
+    <nav class="menu hidden" aria-label="グローバルメニュー">
+      <ul>
+        <li><a href="#top">トップ</a></li>
+        <li><a href="#problems">お悩み</a></li>
+        <li><a href="#features">特徴</a></li>
+        <li><a href="#detail">詳細</a></li>
+        <li><a href="#proof">実績</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- １．ファーストビュー -->
+    <section id="top">
+      <h1>（誰向け）〇〇のための（提供内容）</h1>
+        <p>（一言説明；管理が簡単／迷わない／行動しやすい）</p>
+        <p><a href="#contact">まずは相談する</a></p>
+    </section>
+
+    <!-- ２．課題提示 -->
+    <section id="problems">
+      <h2>こんなお悩みありませんか？</h2>
+      <ul>
+        <li>（悩み１）</li>
+        <li>（悩み２）</li>
+        <li>（悩み３）</li>
+      </ul>
+    </section>
+
+    <!-- ３．解決策（特徴） -->
+    <section id="features">
+      <h2>このサービスで解決できます</h2>
+      <ol>
+        <li>
+          <h3>特徴１</h3>
+          <p>（短い説明）</p>
+        </li>
+        <li>
+          <h3>特徴２</h3>
+          <p>（短い説明）</p>
+        </li>
+        <li>
+          <h3>特徴３</h3>
+          <p>（短い説明）</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ４．詳細（段階表示：１件目の方を再利用） -->
+    <section id="detail">
+      <h2>サービス詳細</h2>
+
+      <button class="toggle-btn" type="button">詳細を見る</button>
+
+      <div class="detail hidden">
+        <h3>提供範囲</h3>
+        <ul>
+          <li>（提供内容）</li>
+          <li>（提供内容）</li>
+          <li>（提供内容）</li>
+        </ul>
+
+        <h3>進め方</h3>
+        <ol>
+          <li>（ステップ１）</li>
+          <li>（ステップ２）</li>
+          <li>（ステップ３）</li>
+        </ol>
+
+        <h3>料金（例）</h3>
+        <p>（例：〇〇円〜）</p>
+      </div>
+    </section>
+
+    <!-- ５．実績・信頼 -->
+    <section id="proof">
+      <h2>実績。お客様の声</h2>
+      <ul>
+        <li>（実績１：ダミーでOK）</li>
+        <li>（実績２：ダミーでOK）</li>
+        <li>（実績３：ダミーでOK）</li>
+      </ul>
+    </section>
+
+    <!-- ６．FAQ（１件目の型を再利用） -->
+    <section id="faq">
+      <h2>よくある質問</h2>
+
+      <div class="faq-item">
+        <button class="faq-btn" type="button">質問１</button>
+        <div class="faq-answer hidden">
+          <p>回答１</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <button class="faq-btn" type="button">質問２</button>
+        <div class="faq-answer hidden">
+          <p>回答２</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" type="button">質問３</button>
+        <div class="faq-answer hidden">
+          <p>回答３</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ７．お問い合わせ（次の実装でフォームを作る） -->
+    <section id="contact">
+      <h2>お問い合わせ</h2>
+      <p>（ここに「返信目安」「相談は無料」などの安心材料）</p>
+
+      <form id="contact-form" novalidate>
+        <p class="form-error hidden" id="form-error"></p>
+        <p class="form-success hidden" id="form-success"></p>
+        <div>
+          <label for="name">お名前</label>
+          <input id="name" name="name" type="text" />
+        </div>
+
+        <div>
+          <label for="email">メールアドレス</label>
+          <input id="email" name="email" type="email" />
+        </div>
+
+        <div>
+          <label for="message">内容</label>
+          <textarea id="message" name="message" rows="5"></textarea>
+        </div>
+
+        <button type="submit">送信する</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <small>© （スケシロナ）</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
