@@ -57,7 +57,7 @@ const buttons = document.querySelectorAll(`.faq-btn`);
 
 buttons.forEach((btn) => {
   btn.addEventListener(`click`, () => {
-    // 今開いているものを全部閉じる
+    // FAQは常に1つだけ開く仕様
     document.querySelectorAll(`.faq-answer`).forEach((answer) => {
       answer.classList.add(`hidden`);
     });
@@ -69,6 +69,7 @@ buttons.forEach((btn) => {
 
 // メニュー内リンクを押したら閉じる
 menu.addEventListener("click", (e) =>{
+  e.stopPropagation();
   if (!isMenuOpen) return;
   if(e.target.tagName !== "A") return;
 
@@ -110,7 +111,7 @@ function clearSuccess() {
 });
 
 function isValidEmail(value) {
-  return value.includes("@");
+  return value.includes("@") && value.includes(".");
 }
 
 form.addEventListener("submit" , (e) => {
